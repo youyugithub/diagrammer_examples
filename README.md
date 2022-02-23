@@ -81,3 +81,7 @@ my_graphviz <- grViz(
 my_graphviz
 
 ```
+pdf
+```
+my_graph2 %>% export_svg %>% charToRaw %>% rsvg_pdf("graph2.pdf",width=300,height=200)
+```
