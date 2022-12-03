@@ -388,3 +388,10 @@ result
 result%>%export_svg %>% charToRaw %>% rsvg_pdf("5state.pdf")
 
 ```
+
+### format a node
+
+```
+[label=<<b>title</b><br/><p style=\"text-align:center;\">* line1</p><br/>* line2<br/>* line3<br/>* Biological>]
+[label='title\n* line1\\l* line2\\l* line3\\l',penwidth=2]
+```
