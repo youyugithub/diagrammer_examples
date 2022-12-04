@@ -394,4 +394,19 @@ result%>%export_svg %>% charToRaw %>% rsvg_pdf("5state.pdf")
 ```
 [label=<<b>title</b><br/><p style=\"text-align:center;\">* line1</p><br/>* line2<br/>* line3<br/>* Biological>]
 [label='title\n* line1\\l* line2\\l* line3\\l',penwidth=2]
+
+grViz("
+  digraph test {
+    
+    # a 'graph' statement
+    graph [overlap = true, fontsize = 10]
+    
+    # several 'node' statements
+    node [shape = box,
+          fontname = Helvetica]
+    A[label=<<b>Title</b><br/>&#8226; line1<br ALIGN = 'LEFT' />&#8226; line2222<br ALIGN = 'LEFT' />&#8226; line333333>]
+    B
+    A->B
+  }
+  ")
 ```
